@@ -1,14 +1,14 @@
-import { Grid } from '@material-ui/core'
 import React from 'react'
+import { TYPES } from '../constants/messageTypes'
 import { useStyles } from '../styles/style'
 
-function Message({type}) {
+function Message({ type, text }) {
     const classes = useStyles()
-    const defineClassContainer = type === 'company' ? classes.messageContainerCompany :  classes.messageContainerClient
-    const defineClassText = type === 'company' ? classes.messageTextCompany :  classes.messageTextClient
+    const defineClassContainer = type === TYPES.ATTENDANT ? classes.messageContainerCompany : classes.messageContainerClient
+    const defineClassText = type === TYPES.ATTENDANT ? classes.messageTextCompany : classes.messageTextClient
     return (
-       <div className={defineClassContainer} >
-          <p className={defineClassText}> Message Example </p> 
+        <div className={defineClassContainer} >
+            <p className={defineClassText}>{text}</p>
         </div>
     )
 }

@@ -1,20 +1,31 @@
 import { Button, Grid, TextField } from '@material-ui/core'
-import React from 'react'
+import React, { useState } from 'react'
 import { useStyles } from '../styles/style'
 
-function MessageBar() {
+function MessageBar({ add, typeControl, setType }) {
     const classes = useStyles()
+    const [text, setText] = useState('')
+
+    const handleChange = (e) => {
+        setText(e.target.value)
+    }
+
+    const handleClick = () => {
+        add(text, typeControl)
+    }
+
     return (
         <Grid className={classes.messageBar} container spacing={0}>
             <Grid className={classes.buttonContainer} item xs={9}>
-                <TextField className={classes.textField}/>
+                <TextField onChange={e => handleChange(e)} className={classes.textField} />
             </Grid>
             <Grid item xs={3}>
                 <Button
+                    onClick={() => handleClick()}
                     variant="outlined"
                     className={classes.sendButton}
                     color="primary">
-                        Enviar
+                    Enviar
                 </Button>
             </Grid>
         </Grid>

@@ -1,1 +1,1 @@
-Exercíco Tópicos Especiais
+Exercício da disciplina de Tópicos Especiais

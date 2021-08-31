@@ -11,7 +11,11 @@ function MessageBar({ add, typeControl, setType }) {
     }
 
     const handleClick = () => {
-        add(text, typeControl)
+        if(text !== ''){
+            add(text, typeControl)
+        }else{
+            window.alert('Digite algo!')
+        }
     }
 
     return (

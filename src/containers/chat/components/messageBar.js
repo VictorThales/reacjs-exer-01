@@ -13,6 +13,7 @@ function MessageBar({ add, typeControl, setType }) {
     const handleClick = () => {
         if(text !== ''){
             add(text, typeControl)
+            setText('')
         }else{
             window.alert('Digite algo!')
         }
@@ -21,7 +22,7 @@ function MessageBar({ add, typeControl, setType }) {
     return (
         <Grid className={classes.messageBar} container spacing={0}>
             <Grid className={classes.buttonContainer} item xs={9}>
-                <TextField onChange={e => handleChange(e)} className={classes.textField} />
+                <TextField onChange={e => handleChange(e)} value={text} className={classes.textField} />
             </Grid>
             <Grid item xs={3}>
                 <Button

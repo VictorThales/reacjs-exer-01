@@ -23,17 +23,21 @@ export const useStyles = makeStyles({
   },
 
   messageArea: {
-    height: '80%',
+    overflowY:'scroll',
+    display: 'flex',
+    flex:1,
+    height:'600px',
     width: '96%',
     borderStyle: 'solid',
     borderColor: 'rgb(130, 10, 209)',
     marginLeft: '2%',
     marginTop: '2%',
-    backgroundColor: '#edf2fc',
+    backgroundColor: 'white',
     borderWidth: '2px'
   },
 
   chatArea: {
+    height:'800px',
     backgroundColor: 'white',
     padding: '0px',
     borderStyle: 'solid',
@@ -57,6 +61,7 @@ export const useStyles = makeStyles({
     marginLeft: '8%',
     color: 'rgb(130, 10, 209)'
   },
+
   buttonContainer: {
     backgroundColor: 'white',
     borderWidth: '2px',

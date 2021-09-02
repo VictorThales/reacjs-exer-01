@@ -1,3 +1,5 @@
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/VictorThales/reacjs-exer-01/blob/master/LICENSE)
+
 ## Exercício Reactjs
 
 ### Requisitos: 
@@ -19,3 +21,5 @@ hook da lista de mensagens e por consequência irá mostrar em tela a nova mensa
 
 Tópicos Especiais - 
 Prof. Lucas Ferreira
+
+### Autor: Victor Thales
